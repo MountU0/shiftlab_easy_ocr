@@ -1,4 +1,4 @@
-from shiftlab_ocr.generator.generator import Generator
+from .generator import Generator
 
 __all__ = [
     'Generator'

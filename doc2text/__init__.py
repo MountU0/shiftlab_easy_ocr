@@ -1,4 +1,4 @@
-from shiftlab_ocr.doc2text.reader import Reader
+from .reader import Reader
 
 __all__ = [
     'Reader'
