@@ -23,7 +23,6 @@ def cosine_similarity(str1:str, str2:str) -> float:
     else:
         return dot_product / (magnitude1 * magnitude2)
 
-
 def cer(y_true:str, y_pred:str) -> float:
     """Character error rate (CER) is a common metric 
     of the performance of an automatic

@@ -1,21 +1,20 @@
 import os
 from PIL import Image
 
-from .crop import Crop
-from .recognition import Recognizer
-from .segmentation import Detector
+from doc2text.crop import Crop
+from doc2text.recognition import Recognizer
+from doc2text.segmentation import Detector
 
 
 class Reader:
     def __init__(
       self,
-      yolo_path = os.path.join(os.path.dirname(__file__), "yolov5"),
-      detector_weights = os.path.join(os.path.dirname(__file__), "weights/weights.pt"),
+      detector_weights = os.path.join(os.path.dirname(__file__), "weights/easyOCR"),
       recognizer_weights = os.path.join(os.path.dirname(__file__), "weights/ocr_transformer_4h2l_simple_conv_64x256.pt"),
       ):
       self.recognizer = Recognizer()
       self.recognizer.load_model(recognizer_weights)
-      self.detector = Detector(yolo_path, detector_weights)
+      self.detector = Detector(detector_weights)
 
     def doc2text(self, image_path):
       """
