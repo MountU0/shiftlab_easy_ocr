@@ -6,3 +6,4 @@ Pillow==7.1.2
 PyYAML==6.0
 evaluate
 easyocr
+jiwer
