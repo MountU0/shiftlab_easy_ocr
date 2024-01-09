@@ -12,9 +12,9 @@ class Generator:
             raise Exception('choose a language: lang="ru" for Russian')
         path = os.path.join(dirname, 'content')
         self.backgrounds = backgrounds = [os.path.join(path, f) for f in os.listdir(path) if f[-2:] == 'ng']
-        self.ink_colors = [(0, 0, 0), (32, 29, 137), (92, 69, 237), (42, 129, 197), (32, 29, 237)]
+        self.ink_colors = [(0, 0, 0), (32, 29, 137)]
         self.source = []
-        self.len2font_size = {4: 90, 5: 90, 6: 80, 7: 75, 8: 75, 9: 85, 10: 85, 11: 68, 12: 65, 13: 65, 14: 65}
+        self.len2font_size = {2: 90, 3: 90, 4: 90, 5: 90, 6: 80, 7: 75, 8: 75, 9: 85, 10: 85, 11: 68, 12: 65, 13: 65, 14: 65, 15: 50}
 
         self.N = len(self.fonts)
         self.M = len(self.backgrounds)
@@ -51,8 +51,9 @@ class Generator:
         img = Image.open(self.backgrounds[i])
         return img
 
-    def generate_from_string(self, string, min_length=3, max_length=24, FONT_PATH = None, verbose = False):
+    def generate_from_string(self, string, min_length=2, max_length=24, FONT_PATH = None, verbose = False, i=None):
         if len(string) < min_length:
+            print(min_length)
             return None
         if len(string) > max_length:
             if verbose:
@@ -68,12 +69,14 @@ class Generator:
         if FONT_PATH != None:
             font = ImageFont.truetype(FONT_PATH, int(font_size * 1.4))
         else:
-            i = random.randint(0, self.N - 1)
+            if not i:
+                i = random.randint(0, self.N - 1)
             counter = 0
             while not self.fonts[i].isValid(string):
-                i = random.randint(0, self.N - 1)
+                if not i:
+                    i = random.randint(0, self.N - 1)
                 counter += 1
-                if counter > 10:
+                if counter > 20:
                     return None
             font_size = int(font_size * self.fonts[i].size_coef)
             try:
@@ -82,7 +85,7 @@ class Generator:
                 i = random.randint(0, self.N - 1)
                 font = ImageFont.truetype(self.fonts[i].path, font_size)
         d = ImageDraw.Draw(img)
-        d.text((10, 1), string, font=font, fill=ink_color)
+        d.text((50, 10 + self.fonts[i].y), string, font=font, fill=ink_color)
         width, height = img.size
         left = 5
         top = height / 8
