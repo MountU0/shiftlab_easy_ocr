@@ -14,7 +14,7 @@ class Generator:
         self.backgrounds = backgrounds = [os.path.join(path, f) for f in os.listdir(path) if f[-2:] == 'ng']
         self.ink_colors = [(0, 0, 0), (32, 29, 137)]
         self.source = []
-        self.len2font_size = {2: 90, 3: 90, 4: 90, 5: 90, 6: 80, 7: 75, 8: 75, 9: 85, 10: 85, 11: 68, 12: 65, 13: 65, 14: 65, 15: 50}
+        self.len2font_size = {2: 90, 3: 90, 4: 90, 5: 90, 6: 80, 7: 75, 8: 75, 9: 85, 10: 85, 11: 68, 12: 65, 13: 55, 14: 55, 15: 55, 16: 55}
 
         self.N = len(self.fonts)
         self.M = len(self.backgrounds)
@@ -84,6 +84,7 @@ class Generator:
             except:
                 i = random.randint(0, self.N - 1)
                 font = ImageFont.truetype(self.fonts[i].path, font_size)
+
         d = ImageDraw.Draw(img)
         d.text((50, 10 + self.fonts[i].y), string, font=font, fill=ink_color)
         width, height = img.size
