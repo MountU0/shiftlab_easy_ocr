@@ -50,7 +50,7 @@ Font(os.path.join(DIR,'werner15.ttf'),True,True,True,list(' +.,;:"()! '),1), \
 Font(os.path.join(DIR,'werner16.ttf'),True,True,True,list(' +%,./()[]:;'),1), \
 Font(os.path.join(DIR,'werner17.ttf'),True,True,False,list(' +%,./()[]:;'),1), \
 Font(os.path.join(DIR,'bimbo.regular.ttf'),False,False,False,list(' +%,.-/()[]:;'),0.8), \
-Font(os.path.join(DIR,'amandasignature.ttf'),False,False,True,list(' +%,.-/()[]:;'),0.5), \
+Font(os.path.join(DIR,'amandasignature.ttf'),False,False,True,list(' +%,.-/()[]:;'),0.5, 15), \
 Font(os.path.join(DIR,'mathilde.regular.otf'),False,False,True,list(' +%,.-/()[]:;'),0.5), \
 Font(os.path.join(DIR,'werner2.ttf'),True,True,False,list('?!,.:;"()+[] '),1.4,-15), \
 Font(os.path.join(DIR,'werner3.ttf'),True,True,False,list('?!,.:;"()+[] '),1.4,-10), \
@@ -76,23 +76,23 @@ Font(os.path.join(DIR,'gost_a.ttf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:
 Font(os.path.join(DIR,'GOST_AU.TTF'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.8, 10), \
 Font(os.path.join(DIR,'gost_b.ttf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.5, 15), \
 Font(os.path.join(DIR,'GOST_BU.TTF'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.8,-5), \
-Font(os.path.join(DIR,'gost_curve_b.ttf'),True,True,True,list('!@#$%^&*()_+-="%./"[]:; '), 0.55, 10), \
-Font(os.path.join(DIR,'gost_curve.ttf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.6,10), \
-Font(os.path.join(DIR,'arial_bolditalicmt.ttf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.6, 10), \
+Font(os.path.join(DIR,'gost_curve_b.ttf'),True,True,True,list('!@#$%^&*()_+-="%./"[]:; '), 0.5, 10), \
+Font(os.path.join(DIR,'gost_curve.ttf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.6,20), \
+Font(os.path.join(DIR,'arial_bolditalicmt.ttf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.55, 10), \
 Font(os.path.join(DIR,'arialmt.ttf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.7, 10), \
 Font(os.path.join(DIR,'calibri.ttf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.7, 10), \
-Font(os.path.join(DIR,'calibri_bold.ttf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.7,10), \
-Font(os.path.join(DIR,'timesnewromanpsmt.ttf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.7,10), \
-Font(os.path.join(DIR,'cuyabra-Regular.ttf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.55,10), \
-Font(os.path.join(DIR,'ComicoroRu_0.ttf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.8,10), \
-Font(os.path.join(DIR,'Ostrovsky-Bold_0.otf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.55,10), \
-Font(os.path.join(DIR,'gogol_regular.otf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.6,10), \
-Font(os.path.join(DIR,'EBGaramond08-Regular.otf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.8,10), \
-Font(os.path.join(DIR,'EBGaramondSC08-Regular.otf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.6,10), \
-Font(os.path.join(DIR,'better-vcr-5.2.ttf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.55,10), \
-Font(os.path.join(DIR,'Madiffure-Demo.ttf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.6,10), \
-Font(os.path.join(DIR,'StampatelloFaceto.otf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.6,10), \
-Font(os.path.join(DIR,'the_weekend.otf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),1,10), \
-Font(os.path.join(DIR,'CruinnRegular.ttf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.65,10), \
-Font(os.path.join(DIR,'BartinaRegular.ttf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.8,10), \
-Font(os.path.join(DIR,'KelsonSansRU-Normal.otf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.8,10)]
+Font(os.path.join(DIR,'calibri_bold.ttf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.7,20), \
+Font(os.path.join(DIR,'timesnewromanpsmt.ttf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.7,20), \
+Font(os.path.join(DIR,'cuyabra-Regular.ttf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.55,20), \
+Font(os.path.join(DIR,'ComicoroRu_0.ttf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.8,20), \
+Font(os.path.join(DIR,'Ostrovsky-Bold_0.otf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.55,20), \
+Font(os.path.join(DIR,'gogol_regular.otf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.6,20), \
+Font(os.path.join(DIR,'EBGaramond08-Regular.otf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.8,20), \
+Font(os.path.join(DIR,'EBGaramondSC08-Regular.otf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.6,20), \
+Font(os.path.join(DIR,'better-vcr-5.2.ttf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.55,20), \
+Font(os.path.join(DIR,'Madiffure-Demo.ttf'),True,True,False,list('!@#$%^&*()_+-="%,./"[]:; '),0.6,20), \
+Font(os.path.join(DIR,'StampatelloFaceto.otf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.6,20), \
+Font(os.path.join(DIR,'the_weekend.otf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.8,20), \
+Font(os.path.join(DIR,'CruinnRegular.ttf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.65,20), \
+Font(os.path.join(DIR,'BartinaRegular.ttf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.8,20), \
+Font(os.path.join(DIR,'KelsonSansRU-Normal.otf'),True,True,True,list('!@#$%^&*()_+-="%,./"[]:; '),0.6,20)]

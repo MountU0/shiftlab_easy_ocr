@@ -1,2 +1,8 @@
-/test
+/test/*
 /generated_dataset
+/__pycache__
+/doc2text/__pycache__
+/generator/__pycache__
+/metric/__pycache__
+doc2text/weights/easyOCR/user_network/modules/__pycache__/
+generator/__pycache__

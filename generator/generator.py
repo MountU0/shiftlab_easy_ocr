@@ -14,7 +14,9 @@ class Generator:
         self.backgrounds = backgrounds = [os.path.join(path, f) for f in os.listdir(path) if f[-2:] == 'ng']
         self.ink_colors = [(0, 0, 0), (32, 29, 137)]
         self.source = []
-        self.len2font_size = {2: 90, 3: 90, 4: 90, 5: 90, 6: 80, 7: 75, 8: 75, 9: 85, 10: 85, 11: 68, 12: 65, 13: 55, 14: 55, 15: 55, 16: 55}
+        self.len2font_size = {2: 90, 3: 90, 4: 90, 5: 90, 6: 80, 7: 75, 8: 75, 9: 85, 10: 85, 11: 68,
+                               12: 65, 13: 55, 14: 55, 15: 55, 16: 55, 17: 50, 18: 50, 19: 50, 20: 45,
+                                 21: 45, 22: 45, 23: 45, 24: 45, 25: 40}
 
         self.N = len(self.fonts)
         self.M = len(self.backgrounds)
@@ -51,7 +53,7 @@ class Generator:
         img = Image.open(self.backgrounds[i])
         return img
 
-    def generate_from_string(self, string, min_length=2, max_length=24, FONT_PATH = None, verbose = False, i=None):
+    def generate_from_string(self, string, min_length=2, max_length=24, FONT_PATH=None, verbose=False, i=None):
         if len(string) < min_length:
             print(min_length)
             return None
@@ -67,24 +69,22 @@ class Generator:
         font_size = self.len2font_size[L]
 
         if FONT_PATH != None:
-            font = ImageFont.truetype(FONT_PATH, int(font_size * 1.4))
+            font = ImageFont.truetype(FONT_PATH, int(font_size * 1.3))
         else:
             if not i:
                 i = random.randint(0, self.N - 1)
             counter = 0
             while not self.fonts[i].isValid(string):
-                if not i:
-                    i = random.randint(0, self.N - 1)
+                i = random.randint(0, self.N - 1)
                 counter += 1
-                if counter > 20:
+                if counter > 60:
                     return None
             font_size = int(font_size * self.fonts[i].size_coef)
             try:
                 font = ImageFont.truetype(self.fonts[i].path, font_size)
             except:
                 i = random.randint(0, self.N - 1)
-                font = ImageFont.truetype(self.fonts[i].path, font_size)
-
+                font = ImageFont.truetype(self.fonts[i].path, font_size)             
         d = ImageDraw.Draw(img)
         d.text((50, 10 + self.fonts[i].y), string, font=font, fill=ink_color)
         width, height = img.size
