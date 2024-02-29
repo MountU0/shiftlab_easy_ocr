@@ -6,3 +6,4 @@
 /metric/__pycache__
 doc2text/weights/easyOCR/user_network/modules/__pycache__/
 generator/__pycache__
+doc2text/weights/model_saved
